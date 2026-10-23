@@ -1,0 +1,13 @@
+feature,importance
+numeric__deadline_ratio,0.8930732613693592
+numeric__alu_count_1c,0.0203593543132015
+numeric__branch_count_1c,0.0165625997028928
+numeric__branch_taken_count_1c,0.01511198371227402
+numeric__load_count_1c,0.01046362268869665
+numeric__workload_size,0.008553772089258433
+numeric__instruction_count_1c,0.008235455297124161
+numeric__store_count_1c,0.008095495811295825
+type__workload_type_arithmetic,0.006506368663955462
+type__workload_type_memory,0.005540733566688291
+type__workload_type_mixed,0.004530315848132367
+type__workload_type_branch,0.002967036937121322

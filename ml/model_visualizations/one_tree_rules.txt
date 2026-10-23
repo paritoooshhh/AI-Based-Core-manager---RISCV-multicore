@@ -1,0 +1,22 @@
+Illustrative tree from the forest, truncated to depth 5.
+This is one of 300 trees, not the complete Random Forest policy.
+
+|--- type__workload_type_memory <= 0.50
+|   |--- numeric__deadline_ratio <= 0.05
+|   |   |--- class: 1.0
+|   |--- numeric__deadline_ratio >  0.05
+|   |   |--- class: 0.0
+|--- type__workload_type_memory >  0.50
+|   |--- numeric__load_count_1c <= 0.23
+|   |   |--- numeric__deadline_ratio <= 0.05
+|   |   |   |--- class: 1.0
+|   |   |--- numeric__deadline_ratio >  0.05
+|   |   |   |--- class: 0.0
+|   |--- numeric__load_count_1c >  0.23
+|   |   |--- numeric__workload_size <= 0.84
+|   |   |   |--- class: 0.0
+|   |   |--- numeric__workload_size >  0.84
+|   |   |   |--- numeric__deadline_ratio <= 0.05
+|   |   |   |   |--- class: 1.0
+|   |   |   |--- numeric__deadline_ratio >  0.05
+|   |   |   |   |--- class: 0.0

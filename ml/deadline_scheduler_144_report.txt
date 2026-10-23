@@ -1,0 +1,26 @@
+EXPANDED DEADLINE-AWARE SCHEDULER
+scikit-learn version: 1.9.1
+Benchmark configurations: 144
+Supervised examples: 144
+Evaluation training examples: 96
+Held-out examples: 48
+Training sizes: [8, 16, 32, 64, 128, 256]
+Held-out sizes: [48, 96, 192]
+Accuracy vs policy-generated labels: 0.7500
+
+Classification report:
+              precision    recall  f1-score   support
+
+           2       1.00      1.00      1.00        24
+           3       0.00      0.00      0.00        12
+           4       0.50      1.00      0.67        12
+
+    accuracy                           0.75        48
+   macro avg       0.50      0.67      0.56        48
+weighted avg       0.62      0.75      0.67        48
+
+Limitations:
+- Labels imitate a deadline-aware heuristic; they are not optimality proof.
+- Power values are assumptions, not measured hardware power.
+- Held-out sizes test interpolation/generalization on this benchmark only.
+- RTL validation of the final model is a separate step.

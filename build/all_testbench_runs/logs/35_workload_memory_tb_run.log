@@ -1,0 +1,11 @@
+﻿DEBUG: reset=0 required_cores=001 core_enable=0001
+WORKLOAD,memory,requested_cores,1
+COUNTER_CSV,core_id,cycles,instructions,alu,loads,stores,branches,branches_taken
+COUNTER_CSV,0,8,8,1,1,1,0,0
+COUNTER_CSV,1,0,0,0,0,0,0,0
+COUNTER_CSV,2,0,0,0,0,0,0,0
+COUNTER_CSV,3,0,0,0,0,0,0,0
+MEMORY_CHECK,address_4,value=123
+PASS: memory load/store
+Memory workload test completed.
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\workload_memory_tb.v:147: $finish called at 111000 (1ps)

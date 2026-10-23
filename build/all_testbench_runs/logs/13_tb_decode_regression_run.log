@@ -1,0 +1,25 @@
+﻿
+=== DECODE / CORE MANAGER DIAGNOSTICS ===
+PASS:  pattern 0100000 must decode ADD
+PASS: R-type SUB must decode SUB
+PASS: BEQ branch decode
+PASS: BNE branch decode
+PASS: BLT branch decode
+PASS: BGE branch decode
+PASS: BLTU branch decode
+PASS: BGEU branch decode
+PASS: ch funct3 must not assert Branch
+PASS: ch funct3 must not assert Branch
+FINDING: JAL is not implemented by current control_unit
+FINDING: JALR is not implemented by current control_unit
+FINDING: LUI is not implemented by current control_unit
+FINDING: AUIPC is not implemented by current control_unit
+PASS: request 0 disables all cores
+PASS: request 1 mask
+PASS: request 4 mask
+PASS: invalid request 5 fails safe
+PASS: X request fails safe
+
+SUMMARY: failures=0 known_unsupported_instruction_findings=4
+RESULT: PASS for implemented checks; FINDINGs above identify unsupported ISA instructions
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\tb_decode_regression.v:113: $finish called at 19000 (1ps)

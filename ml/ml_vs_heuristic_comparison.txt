@@ -1,0 +1,31 @@
+ML VS DEADLINE-AWARE HEURISTIC: MEASURED-CYCLE COMPARISON
+Workload/deadline cases: 96
+Unique workload-size/type cases: 24
+
+All results below use measured benchmark elapsed cycles.
+Cost is a relative power-times-cycles proxy using provisional per-core power assumptions; it is not measured joules.
+
+Policy summary:
+                  policy  avg_cycles  deadline_met_pct  avg_relative_cost  cores_1  cores_2  cores_3  cores_4
+                      ML      288.50            100.00             250.58        0       48        0       48
+Deadline-aware heuristic      288.50            100.00             250.58        0       48        0       48
+
+Difference (ML minus heuristic):
+Average cycles: 0.00
+Deadline miss count: 0 ML vs 0 heuristic
+Average relative cost difference: 0.00
+
+By deadline ratio:
+                cases  ml_avg_cycles  heuristic_avg_cycles  ml_deadline_met_pct  heuristic_deadline_met_pct  ml_avg_cost  heuristic_avg_cost
+deadline_ratio                                                                                                                              
+0.30               24         194.00                194.00               100.00                      100.00       252.20              252.20
+0.50               24         194.00                194.00               100.00                      100.00       252.20              252.20
+0.75               24         383.00                383.00               100.00                      100.00       248.95              248.95
+0.90               24         383.00                383.00               100.00                      100.00       248.95              248.95
+
+INTERPRETATION LIMITS:
+- This is a benchmark replay: ML-selected core counts are evaluated against measured candidate rows for the same workload.
+- The heuristic labels and model were derived from this same benchmark dataset, so this is not a fully independent generalization test.
+- Power values are provisional assumptions; cost is W*cycles, not measured energy in joules.
+- Existing benchmark timing does not meaningfully distinguish workload types at equal size/core count.
+- Because the ML model imitates the heuristic, matching results do not establish that ML is better than the heuristic.

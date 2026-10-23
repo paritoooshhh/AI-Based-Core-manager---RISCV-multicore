@@ -1,0 +1,21 @@
+NEW MEASURED SIMULATION DATA: SIZES 48, 96, 192
+New benchmark rows: 48 (expected 48)
+Unique workload/type/size cases: 12
+All result_correct == 1: True
+Benchmark log reports BENCHMARK_SUMMARY,failures=0 and BENCHMARK_RESULT,PASS.
+
+Saved-model evaluation on newly measured simulated candidates (model was not retrained):
+Workload/deadline decisions evaluated: 48
+
+                  policy  avg_cycles  deadline_met_pct  avg_relative_cost  ml_vs_heuristic_core_match_pct
+          ML saved model      383.00            100.00             332.48                           75.00
+Deadline-aware heuristic      404.00            100.00             332.07                             NaN
+           Always 1 core     1013.00              0.00             329.23                             NaN
+          Always 4 cores      257.00            100.00             334.10                             NaN
+
+IMPORTANT LIMITATIONS:
+- These are new RTL simulation measurements, not physical-chip measurements.
+- The saved model was not retrained for this evaluation.
+- Deadline ratios and per-core power values are assumptions inherited from the earlier experiment.
+- Relative cost is assumed watts multiplied by simulated cycles, not measured joules.
+- The workload timing model still gives identical elapsed cycles across workload types for the same size/core count.

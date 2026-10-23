@@ -1,0 +1,12 @@
+﻿
+=== RISC-V ARITHMETIC COVERAGE TEST ===
+Counters: cycles=9 instructions=9 alu=9
+Registers: x1=12 x2=5 x3=17 x4=7 x5=4
+Registers: x6=13 x7=9 x8=1 x9=1
+PASS: cycle and instruction counts
+PASS: all nine arithmetic instructions counted
+PASS: ADDI, ADD, SUB, AND, OR, XOR, SLT and SLTU
+PASS: memory and branch counters remain zero
+SUMMARY: failures=0
+RESULT: PASS
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\tb_arithmetic_coverage.v:133: $finish called at 116000 (1ps)

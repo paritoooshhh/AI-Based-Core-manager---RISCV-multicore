@@ -1,0 +1,14 @@
+﻿
+=== MEMORY / BRANCH COUNTER TEST ===
+Observed cycles=6 instructions=6 loads=1 stores=1 branches=1 taken=1
+Register values: x1=42 x2=42 x3=7
+PASS: cycle and instruction counters
+PASS: load counter
+PASS: store counter
+PASS: taken-branch counters
+PASS: loaded value matches stored value
+PASS: taken branch skips x3=99 and reaches x3=7
+PASS: counters hold while disabled
+SUMMARY: failures=0
+RESULT: PASS
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\tb_memory_branch_counter.v:145: $finish called at 106000 (1ps)

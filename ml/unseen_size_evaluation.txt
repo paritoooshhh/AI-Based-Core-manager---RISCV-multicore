@@ -1,0 +1,71 @@
+UNSEEN WORKLOAD-SIZE EVALUATION
+Training workload sizes: [np.int64(8), np.int64(16), np.int64(32), np.int64(64)]
+Held-out workload sizes: [np.int64(128), np.int64(256)]
+Training examples: 64
+Testing examples: 32
+Test workload-type/size cases: 8
+Accuracy vs policy labels on unseen sizes: 1.0000
+
+Classification report:
+              precision    recall  f1-score   support
+
+           2       1.00      1.00      1.00        16
+           4       1.00      1.00      1.00        16
+
+    accuracy                           1.00        32
+   macro avg       1.00      1.00      1.00        32
+weighted avg       1.00      1.00      1.00        32
+
+Confusion matrix:
+[[16  0]
+ [ 0 16]]
+
+Outcome summary on held-out sizes (measured cycle counts; proxy is assumed W*cycles):
+                         policy  avg_cycles  deadline_met_pct  avg_relative_cost
+                             ML      653.00            100.00             566.48
+Deadline heuristic/oracle label      653.00            100.00             566.48
+                  Always 1 core     1733.00              0.00             563.23
+                 Always 4 cores      437.00            100.00             568.10
+
+Per-case results:
+workload_type  workload_size_group  deadline_ratio  label_cores  ml_predicted_cores  prediction_correct  ml_cycles  ml_deadline_met  ml_proxy
+   arithmetic                  128            0.90            2                   2                   1      581.0                1    377.65
+   arithmetic                  128            0.75            2                   2                   1      581.0                1    377.65
+   arithmetic                  128            0.50            4                   4                   1      293.0                1    380.90
+   arithmetic                  128            0.30            4                   4                   1      293.0                1    380.90
+   arithmetic                  256            0.90            2                   2                   1     1157.0                1    752.05
+   arithmetic                  256            0.75            2                   2                   1     1157.0                1    752.05
+   arithmetic                  256            0.50            4                   4                   1      581.0                1    755.30
+   arithmetic                  256            0.30            4                   4                   1      581.0                1    755.30
+       branch                  128            0.90            2                   2                   1      581.0                1    377.65
+       branch                  128            0.75            2                   2                   1      581.0                1    377.65
+       branch                  128            0.50            4                   4                   1      293.0                1    380.90
+       branch                  128            0.30            4                   4                   1      293.0                1    380.90
+       branch                  256            0.90            2                   2                   1     1157.0                1    752.05
+       branch                  256            0.75            2                   2                   1     1157.0                1    752.05
+       branch                  256            0.50            4                   4                   1      581.0                1    755.30
+       branch                  256            0.30            4                   4                   1      581.0                1    755.30
+       memory                  128            0.90            2                   2                   1      581.0                1    377.65
+       memory                  128            0.75            2                   2                   1      581.0                1    377.65
+       memory                  128            0.50            4                   4                   1      293.0                1    380.90
+       memory                  128            0.30            4                   4                   1      293.0                1    380.90
+       memory                  256            0.90            2                   2                   1     1157.0                1    752.05
+       memory                  256            0.75            2                   2                   1     1157.0                1    752.05
+       memory                  256            0.50            4                   4                   1      581.0                1    755.30
+       memory                  256            0.30            4                   4                   1      581.0                1    755.30
+        mixed                  128            0.90            2                   2                   1      581.0                1    377.65
+        mixed                  128            0.75            2                   2                   1      581.0                1    377.65
+        mixed                  128            0.50            4                   4                   1      293.0                1    380.90
+        mixed                  128            0.30            4                   4                   1      293.0                1    380.90
+        mixed                  256            0.90            2                   2                   1     1157.0                1    752.05
+        mixed                  256            0.75            2                   2                   1     1157.0                1    752.05
+        mixed                  256            0.50            4                   4                   1      581.0                1    755.30
+        mixed                  256            0.30            4                   4                   1      581.0                1    755.30
+
+LIMITATIONS:
+- The two largest sizes are held out entirely; this is a stricter generalization test.
+- Labels still come from the same provisional deadline-aware power-cost rule.
+- The benchmark has only six discrete sizes, so holding out 128 and 256 leaves only four sizes for training.
+- Power-cost values are assumptions and not measured joules.
+- The 'heuristic/oracle label' row uses the rule's selected candidate and is a reference, not an independent learned baseline.
+- Workload timing still does not meaningfully distinguish types at equal size/core count.

@@ -1,0 +1,8 @@
+﻿=== CORE MANAGER TEST ===
+requested=0 enables=xxxx
+requested=1 enables=0001
+requested=2 enables=0011
+requested=3 enables=0111
+requested=4 enables=1111
+requested=7 enables=0000
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\tb_core_manager.v:44: $finish called at 7000 (1ps)

@@ -1,0 +1,40 @@
+INDEPENDENT SAVED-MODEL CHECK
+Model path: C:\Users\parit\Desktop\AI Project\Designs\Final Folder\ml\models\deadline_core_scheduler.joblib
+Examples path: C:\Users\parit\Desktop\AI Project\Designs\Final Folder\ml\deadline_scheduler_examples.csv
+Recreated test examples: 24
+Distinct held-out workload cases: 6
+Accuracy vs policy-generated labels: 1.0000
+Exact label matches: 24/24
+
+Predictions by held-out case:
+        case_id  deadline_ratio  label_cores  ml_predicted_cores  label_deadline_feasible  prediction_matches_policy
+arithmetic__128            0.90            2                   2                        1                          1
+arithmetic__128            0.75            2                   2                        1                          1
+arithmetic__128            0.50            4                   4                        1                          1
+arithmetic__128            0.30            4                   4                        1                          1
+      branch__8            0.90            2                   2                        1                          1
+      branch__8            0.75            2                   2                        1                          1
+      branch__8            0.50            4                   4                        1                          1
+      branch__8            0.30            4                   4                        1                          1
+     branch__32            0.90            2                   2                        1                          1
+     branch__32            0.75            2                   2                        1                          1
+     branch__32            0.50            4                   4                        1                          1
+     branch__32            0.30            4                   4                        1                          1
+    branch__256            0.90            2                   2                        1                          1
+    branch__256            0.75            2                   2                        1                          1
+    branch__256            0.50            4                   4                        1                          1
+    branch__256            0.30            4                   4                        1                          1
+     memory__64            0.90            2                   2                        1                          1
+     memory__64            0.75            2                   2                        1                          1
+     memory__64            0.50            4                   4                        1                          1
+     memory__64            0.30            4                   4                        1                          1
+     mixed__128            0.90            2                   2                        1                          1
+     mixed__128            0.75            2                   2                        1                          1
+     mixed__128            0.50            4                   4                        1                          1
+     mixed__128            0.30            4                   4                        1                          1
+
+INTERPRETATION:
+- This reloads the saved joblib artifact and checks predictions on the same deterministic held-out split.
+- This is an independent artifact/pipeline check, but not a new untouched test set because the test split was already inspected during training.
+- This does not compare real ML-selected latency or energy against the heuristic: the current dataset has no independent outcome measurement for arbitrary ML actions.
+- To compare scheduler outcomes, evaluate each predicted core count against per-workload candidate measurements from the original benchmark, while keeping workload identity and deadline cases aligned.

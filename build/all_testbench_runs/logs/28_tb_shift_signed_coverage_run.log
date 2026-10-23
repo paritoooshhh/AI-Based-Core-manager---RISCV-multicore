@@ -1,0 +1,29 @@
+﻿
+=== SHIFT / SIGNED ARITHMETIC TEST ===
+
+--- Counter Results ---
+Cycles=9 Instructions=9 ALU=9
+
+--- Register Results ---
+x1 = 0xfffffff8
+x2 = 0x00000002
+x3 = 0x00000008
+x4 = 0x3ffffffe
+x5 = 0xfffffffe
+x6 = 0xfffffffb
+x7 = 0x00000010
+x8 = 0x3ffffffe
+x9 = 0xfffffffe
+PASS: cycle and ALU counters
+PASS: negative immediate sign extension
+PASS: SLL
+PASS: SRL zero-fills the left side
+PASS: SRA preserves the sign bit
+PASS: negative ADDI arithmetic
+PASS: SLLI
+PASS: SRLI zero-fills the left side
+PASS: SRAI preserves the sign bit
+
+SUMMARY: failures=0
+RESULT: PASS
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\tb_shift_signed_coverage.v:177: $finish called at 116000 (1ps)

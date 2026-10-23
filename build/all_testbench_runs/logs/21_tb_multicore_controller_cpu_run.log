@@ -1,0 +1,14 @@
+﻿
+=== CONTROLLER-TO-CPU WORKLOAD TEST ===
+Case 1: N=8 K=4 enable=1111 results=1,5,9,13
+PASS: four controller-assigned CPU workers active
+PASS: all four CPU range sums correct
+PASS: all four CPUs executed useful instructions
+Case 2: N=7 K=3 enable=0111 results=3,7,11,0
+PASS: only three valid workers enabled
+PASS: uneven ranges and inactive core handled correctly
+Case 3: N=0 K=4 enable=0000 done=1
+PASS: zero-work case completes with no active workers
+SUMMARY: failures=0
+RESULT: PASS
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\tb_multicore_controller_cpu.v:96: $finish called at 326000 (1ps)

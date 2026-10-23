@@ -1,0 +1,29 @@
+﻿=== INTEGRATED MAIN RTL + RESULT COMBINER TEST ===
+
+--- N=8, K=4 ---
+core_enable=1111 done=1 result_valid=1
+partial results: 1, 5, 9, 13
+combined final_result=28 (expected 28)
+PASS: active-core mask
+PASS: completion and result_valid
+PASS: combined final result
+
+--- N=7, K=3 ---
+core_enable=0111 done=1 result_valid=1
+partial results: 3, 7, 11, 0
+combined final_result=21 (expected 21)
+PASS: active-core mask
+PASS: completion and result_valid
+PASS: combined final result
+
+--- N=0, K=4 ---
+core_enable=0000 done=1 result_valid=1
+partial results: 0, 0, 0, 0
+combined final_result=0 (expected 0)
+PASS: active-core mask
+PASS: completion and result_valid
+PASS: combined final result
+
+SUMMARY: failures=0
+RESULT: PASS
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\tb_integrated_multicore_combiner.v:140: $finish called at 356000 (1ps)

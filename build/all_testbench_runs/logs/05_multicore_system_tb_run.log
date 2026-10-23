@@ -1,0 +1,24 @@
+﻿ML predicted core count = 1
+PASS: requested=0 enable=0000
+PASS: requested=1 enable=0001
+PASS: requested=2 enable=0011
+PASS: requested=3 enable=0111
+PASS: requested=4 enable=1111
+PASS: RISC-V execution
+Core 0 x3 = 30
+Core 1 x3 = 30
+Core 0 instruction count = 11
+Core 1 instruction count = 10
+Core 2 instruction count = 1
+Core 3 instruction count = 0
+COUNTER_CSV,core_id,cycles,instructions,alu,loads,stores,branches,branches_taken
+COUNTER_CSV,0,11,11,3,0,0,0,0
+COUNTER_CSV,1,10,10,3,0,0,0,0
+COUNTER_CSV,2,1,1,1,0,0,0,0
+COUNTER_CSV,3,0,0,0,0,0,0,0
+ML core prediction = 1
+Core enable mask = 0001
+PASS: parallel vector addition
+C = 11, 22, 33, 44, 55, 66, 77, 88
+PASS: Complete multicore_system testbench
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\multicore_system_tb.v:274: $finish called at 306000 (1ps)

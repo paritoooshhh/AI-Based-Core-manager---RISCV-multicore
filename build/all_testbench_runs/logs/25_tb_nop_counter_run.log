@@ -1,0 +1,9 @@
+﻿
+=== NOP / REAL ALU COUNTER TEST ===
+Observed cycles=8 instructions=8 alu=3
+Register values: x1=5 x2=8 x3=13
+PASS: NOPs excluded and real ALU operations counted
+PASS: ADDI and ADD results are correct
+SUMMARY: failures=0
+RESULT: PASS
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\tb_nop_counter.v:101: $finish called at 106000 (1ps)

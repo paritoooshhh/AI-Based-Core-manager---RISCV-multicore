@@ -1,0 +1,19 @@
+﻿
+========================================
+      ML-DRIVEN ADDITION TEST
+========================================
+Predicted cores : 1
+Requested cores : 1
+Core enable mask: 0001
+PASS: RTL mask matches ML prediction
+
+--------------- RESULTS ----------------
+Core 0: 10 + 20 = 30
+Core 0 cycles              : 16
+Core 0 instruction counter  : 16
+Core 0 ALU counter          : 3
+PASS: 10 + 20 = 30
+========================================
+PASS: ML-DRIVEN ADDITION TEST
+========================================
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\matrix_multiplication_tb.v:211: $finish called at 191000 (1ps)

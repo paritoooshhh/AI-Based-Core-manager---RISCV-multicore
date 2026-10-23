@@ -1,0 +1,11 @@
+﻿iverilog.exe : C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\tb_result_combiner.v:11: error: Unknown module type: result_combiner
+At C:\Users\parit\Desktop\AI Project\Designs\Final Folder\run_all_testbenches.ps1:125 char:28
++ ... eOutput = @(& iverilog -g2012 -s $top -o $simFile @sources $tb.FullNa ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\parit\...result_combiner:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+2 error(s) during elaboration.
+*** These modules were missing:
+        result_combiner referenced 1 times.
+***

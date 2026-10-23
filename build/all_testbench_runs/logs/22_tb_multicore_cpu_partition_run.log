@@ -1,0 +1,24 @@
+﻿
+=== FOUR-CORE CPU PARTITIONED ADD TEST ===
+core_enable=1111
+PASS: all four cores enabled concurrently
+Cycle counters: 10, 10, 10, 10
+PASS: all four CPU cycle counters advanced
+
+--- Verify CPU register results ---
+PASS: core0 x3 (1+10) = 11
+PASS: core0 x6 (2+20) = 22
+PASS: core1 x3 (3+30) = 33
+PASS: core1 x6 (4+40) = 44
+PASS: core2 x3 (5+50) = 55
+PASS: core2 x6 (6+60) = 66
+PASS: core3 x3 (7+70) = 77
+PASS: core3 x6 (8+80) = 88
+
+Instruction counters: 10, 10, 10, 10
+ALU counters: 6, 6, 6, 6
+NOTE: Each core ran its own statically assigned program concurrently.
+NOTE: This testbench does not yet connect the workload controller to CPU PCs.
+SUMMARY: failures=0
+RESULT: PASS
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\tb_multicore_cpu_partition.v:160: $finish called at 136000 (1ps)

@@ -1,0 +1,15 @@
+﻿
+=== AI-DRIVEN PARALLEL FIBONACCI DEMO ===
+ML predicted cores: 1
+Core enable mask: 0001
+
+Core,Enabled,Fibonacci_Result,Cycles,Instructions,ALU,Branches,Taken
+0,1,5,90,90,19,7,4
+1,0,0,0,0,0,0,0
+2,0,0,0,0,0,0,0
+3,0,0,0,0,0,0,0
+
+PASS: ML prediction controls core activation
+PASS: Active cores completed independent Fibonacci tasks
+PASS: Performance counters collected
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\ai_fibonacci_demo_tb.v:238: $finish called at 930000 (1ps)

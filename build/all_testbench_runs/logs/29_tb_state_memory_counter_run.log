@@ -1,0 +1,12 @@
+﻿
+=== REGISTER / MEMORY / COUNTER DIAGNOSTICS ===
+PASS: register x1 is zero after reset
+PASS: x0 always reads zero
+PASS: register write/read
+PASS: explicitly initialized data-memory location reads expected value
+PASS: enabled event increments cycle/instruction/ALU counters
+PASS: counters hold while disabled
+NOTE: instruction_count equals cycle_count by construction in this single-cycle design.
+SUMMARY: failures=0
+RESULT: PASS
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\tb_state_memory_counter.v:208: $finish called at 46000 (1ps)

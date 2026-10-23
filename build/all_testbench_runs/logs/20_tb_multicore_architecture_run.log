@@ -1,0 +1,28 @@
+﻿
+=== MULTICORE ARCHITECTURE DIAGNOSTIC ===
+
+--- CORE ENABLE DIAGNOSTICS ---
+required_cores=100 (4)
+Internal enables [3:0]=1111
+Top-level core_enable=1111
+PASS: all four cores are enabled
+PASS: internal core-manager outputs are correct
+
+--- VECTOR WORKLOAD ---
+PASS: vector FSM produced expected vector sum
+Outputs: 11 22 33 44 55 66 77 88
+
+--- CPU ACTIVITY ---
+core_enable=1111
+CPU cycle counters: 6, 6, 6, 6
+CPU instruction counters: 6, 6, 6, 6
+CPU ALU counters: 0, 0, 0, 0
+
+ARCHITECTURE FINDING:
+Vector addition is handled by parallel_shared_vector.
+CPU instruction memories contain only NOP instructions.
+This test does not demonstrate cooperative CPU execution.
+
+SUMMARY: failures=0
+RESULT: PASS
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\tb_multicore_architecture.v:210: $finish called at 76000 (1ps)

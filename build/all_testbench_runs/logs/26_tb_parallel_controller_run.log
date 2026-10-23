@@ -1,0 +1,29 @@
+﻿
+=== PARALLEL WORKLOAD RANGE DIAGNOSTICS ===
+DEBUG: work=8 requested=3 valid=0111
+DEBUG: c0=0..2 c1=3..5 c2=6..7 c3=0..0
+INTERNAL: count=3 base=2 remainder=2
+INTERNAL: next_valid=0111
+INTERNAL: next_start=0,3,6,0
+INTERNAL: next_end=2,5,7,0
+PASS: 3-core valid mask
+PASS: 8 items partitioned across 3 workers
+DEBUG: work=8 requested=5 valid=1111
+DEBUG: c0=0..1 c1=2..3 c2=4..5 c3=6..7
+INTERNAL: count=4 base=2 remainder=0
+INTERNAL: next_valid=1111
+INTERNAL: next_start=0,2,4,6
+INTERNAL: next_end=1,3,5,7
+PASS: request above 4 clamps to four slots
+PASS: 8 items partitioned across 4 slots
+DEBUG: work=0 requested=2 valid=0000
+DEBUG: c0=0..0 c1=0..0 c2=0..0 c3=0..0
+INTERNAL: count=0 base=0 remainder=0
+INTERNAL: next_valid=0000
+INTERNAL: next_start=0,0,0,0
+INTERNAL: next_end=0,0,0,0
+PASS: zero work has no valid ranges
+----------------------------------------
+SUMMARY: failures=0
+RESULT: PASS
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\tb_parallel_controller.v:156: $finish called at 66000 (1ps)

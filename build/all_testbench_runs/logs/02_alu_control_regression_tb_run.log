@@ -1,0 +1,2 @@
+﻿PASS: ADDI immediate 1024 decodes as ADD; R-type SUB decodes as SUB.
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\alu_control_regression_tb.v:40: $finish called at 2000 (1ps)

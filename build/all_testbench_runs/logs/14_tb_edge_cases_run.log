@@ -1,0 +1,29 @@
+﻿
+=== EDGE CASE / COMPARISON TEST ===
+
+--- Counter Results ---
+Cycles=10 Instructions=10 ALU=8
+
+--- Register Results ---
+x0 = 0x00000000
+x1 = 0xffffffff
+x2 = 0x00000001
+x3 = 0x00000001
+x4 = 0x00000000
+x5 = 0x00000000
+x6 = 0x00000001
+x7 = 0x00000007
+x8 = 0x00000000
+x9 = 0x00000000
+PASS: cycle, instruction and ALU counters
+PASS: signed SLT (-1 < 1)
+PASS: unsigned SLTU (0xFFFFFFFF < 1)
+PASS: signed SLT (1 < -1)
+PASS: unsigned SLTU (1 < 0xFFFFFFFF)
+PASS: x0 remains zero
+PASS: x0 reads as zero
+PASS: boundary instruction words initialized (not executed)
+
+SUMMARY: failures=0
+RESULT: PASS
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\tb_edge_cases.v:166: $finish called at 126000 (1ps)

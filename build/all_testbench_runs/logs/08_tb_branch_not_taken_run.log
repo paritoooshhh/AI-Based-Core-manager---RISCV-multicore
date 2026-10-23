@@ -1,0 +1,12 @@
+﻿
+=== BRANCH NOT-TAKEN COUNTER TEST ===
+Counters: cycles=5 instructions=5 alu=4 loads=0 stores=0 branches=1 taken=0
+Registers: x1=42 x2=7 x3=99 x4=5
+PASS: cycle and instruction counters
+PASS: branch instruction counted
+PASS: not-taken branch does not increment taken counter
+PASS: fall-through instructions executed correctly
+PASS: load/store counters remain zero
+SUMMARY: failures=0
+RESULT: PASS
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\tb_branch_not_taken.v:121: $finish called at 76000 (1ps)

@@ -1,0 +1,13 @@
+﻿DEBUG: required_cores=001 core_enable=0001
+WORKLOAD,branch,requested_cores,1
+COUNTER_CSV,core_id,cycles,instructions,alu,loads,stores,branches,branches_taken
+COUNTER_CSV,0,12,12,3,0,0,2,1
+COUNTER_CSV,1,0,0,0,0,0,0,0
+COUNTER_CSV,2,0,0,0,0,0,0,0
+COUNTER_CSV,3,0,0,0,0,0,0,0
+PASS: branch taken
+DEBUG: x1=1 x2=1 x3=0 x4=7
+DEBUG: PC=52
+PASS: branch program result
+Branch workload test completed.
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\workload_branch_tb.v:161: $finish called at 151000 (1ps)

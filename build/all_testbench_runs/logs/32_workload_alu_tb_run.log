@@ -1,0 +1,12 @@
+﻿DEBUG: reset=0 required_cores=001 core_enable=0001
+DEBUG: manager outputs=0001
+DEBUG FINAL: core_enable=0001
+DEBUG FINAL: core0 PC=100 cycles=25 instructions=25
+WORKLOAD,alu,requested_cores,1
+COUNTER_CSV,core_id,cycles,instructions,alu,loads,stores,branches,branches_taken
+COUNTER_CSV,0,25,25,20,0,0,0,0
+COUNTER_CSV,1,0,0,0,0,0,0,0
+COUNTER_CSV,2,0,0,0,0,0,0,0
+COUNTER_CSV,3,0,0,0,0,0,0,0
+ALU workload test completed.
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\workload_alu_tb.v:151: $finish called at 281000 (1ps)

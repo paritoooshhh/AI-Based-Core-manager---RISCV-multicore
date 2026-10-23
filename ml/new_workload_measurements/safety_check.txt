@@ -1,0 +1,11 @@
+NEW WORKLOAD SIZE SAFETY CHECK
+Requested new sizes: [48, 96, 192]
+Static checks:
+PASS: benchmark testbench references heavy top
+PASS: addon defines heavy top
+PASS: addon defines heavy partition worker
+PASS: main RTL contains memory depth/indexing clues
+
+No RTL or original testbench files were modified.
+This check is not a benchmark run and does not produce new measured data.
+Next: create a separate parameterized testbench and validate expected results before treating any output as new measurements.

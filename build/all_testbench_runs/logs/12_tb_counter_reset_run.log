@@ -1,0 +1,10 @@
+﻿
+=== PERFORMANCE COUNTER RESET TEST ===
+Before reset: cycles=4 instructions=4 alu=1 loads=1 stores=1 branches=1 taken=1
+PASS: counters accumulated before reset
+During reset: cycles=0 instructions=0 alu=0 loads=0 stores=0 branches=0 taken=0
+PASS: all seven counters clear on reset
+PASS: counters remain zero after reset while disabled
+SUMMARY: failures=0
+RESULT: PASS
+C:\Users\parit\Desktop\AI Project\Designs\Final Folder\tb\tb_counter_reset.v:124: $finish called at 86000 (1ps)
