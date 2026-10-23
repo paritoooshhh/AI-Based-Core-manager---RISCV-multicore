@@ -252,6 +252,4 @@ included in that folder.
 
 ## License
 
-No license information was provided. Add a `LICENSE` file before
-redistributing the repository if you intend to specify reuse
-permissions.
+No license information
